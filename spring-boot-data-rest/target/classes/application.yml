@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: DEPARTMENT-SERVICE
+  data:
+    rest:
+      base-path: /api/
+      default-page-size: '4'
+  datasource:
+    url: jdbc:h2:~/department
+    driver-class-name: org.h2.Driver
+    username:
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+
